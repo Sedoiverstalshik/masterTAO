@@ -410,7 +410,7 @@ img {
   text-align: center;
 }
 
-.big__input .small__text {
+.big__input.small__text {
   font-weight: 400;
 }
 

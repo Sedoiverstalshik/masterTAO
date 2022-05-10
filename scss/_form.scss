@@ -110,9 +110,9 @@
     font-size: 0.9em;
     text-align: center;
   }
-  .small__text{
-    font-weight: 400;
-  }
+}
+.big__input.small__text{
+  font-weight: 400;
 }
 .big__item{
   grid-column:1/-1;
