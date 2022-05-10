@@ -1,0 +1,124 @@
+.questions{
+  padding-top: 3rem;
+  margin-bottom: 10rem;
+  &__title{
+    text-align: center;
+    margin-bottom: 7rem;
+    &::before{
+      left: 46%;
+    }
+  }
+  &__form-title{
+    font-weight: 700;
+    font-size: 1.4em;
+    line-height: 1.26;
+    margin-bottom: 0.8rem;
+  }
+  &__form-desc{
+    font-weight: 300;
+    font-size: 1em;
+    line-height: 1.26;
+    margin-bottom: 2.3rem;
+  }
+  &__form{
+    background: #363A4D;
+    box-shadow: 5px 15px 40px rgba(11, 24, 97, 0.32);
+    border-radius: 2rem;
+    padding: 3.8rem 4rem;
+  }
+  &__form input{
+    background: var(--light_color);
+    border-radius: 1rem;
+    padding: 1.9rem 2rem 1.8rem;
+    width: 100%;
+    margin-bottom: 1.4rem;
+    &::placeholder{
+      font-weight: 400;
+      font-size: 0.9em;
+      line-height: 1.26;
+      color: #CBCBCB;
+    }
+  }
+  &__form input:last-child{
+    margin-bottom:0;
+  }
+  &__form-link{
+    margin-top: 1.2rem;
+  }
+}
+.accordion{
+  max-width: 71.6rem;
+}
+.accordion-item{
+  background-color: transparent;
+  margin-bottom: 1.6rem;
+  border: none;
+  &:last-child{
+    margin-bottom: 0;
+  }
+} 
+.accordion-button.collapsed {
+  font-weight: 700;
+  font-size: 1em;
+  line-height: 1.25;
+  background-color: transparent;
+  border: 2px solid #3A444E;
+  color: var(--light_color);
+  padding: 2rem 1.9rem 2rem 3.4rem;
+}
+.accordion-flush .accordion-item .accordion-button {
+  border-radius: 1rem;
+}
+.accordion-flush .accordion-item .accordion-button:not(.collapsed){
+  border-radius: 1rem 1rem 0 0;
+}
+.accordion-button::after{
+  display: none;
+}
+.accordion-button .svg__button {
+  width: 2.7rem;
+  height: 2.7rem;
+  fill: var(--light_color);
+  margin-left: auto;
+  transition: transform 0.2s linear;
+}
+.accordion-collapse{
+  transition:all 0.1s linear;
+
+}
+.accordion-body{
+  padding: 0;
+}
+.accordion-item .show{
+  background-color: var(--light_color);
+  border-radius: 0 0 1rem 1rem;
+  color: var(--bg_color);
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 1.44;
+  padding: 0 1.9rem 2rem 3.4rem;
+}
+.accordion-item .show .accordion-body {
+  max-width: 58.3rem;
+}
+.accordion-button{
+  font-weight: 700;
+  font-size: 1em;
+  line-height: 1.25;
+  background-color: var(--light_color);
+  border: none;
+  color: var(--bg_color);
+  padding: 2rem 1.9rem 2rem 3.4rem;
+}
+.accordion-button:not(.collapsed){
+  background-color: var(--light_color);
+  color:var(--bg_color);
+  box-shadow: none;
+
+}
+.accordion-button:not(.collapsed) svg{
+  transform: rotate(-90deg);
+  fill: var(--accent_color)!important;
+  transition: transform 0.2s linear;
+}
+

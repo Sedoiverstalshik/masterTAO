@@ -1,0 +1,18 @@
+.header{
+  padding: 2.5rem 0;
+  &__logo{
+    max-width: 17.2rem;
+    margin-right: 9.7rem;
+  }
+  &__menu-list li{
+    margin-right: 2rem;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+  &__menu-list a{
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 1.5;
+  }
+}

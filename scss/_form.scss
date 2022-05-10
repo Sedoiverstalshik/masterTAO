@@ -1,0 +1,119 @@
+.title__calculator{
+  margin-bottom: 6.2rem;
+  &::before{
+    bottom: 2rem!important;
+    right: 6rem;
+  }
+}
+.form{
+  &__calculator{
+    position: relative;
+    margin-bottom: 11rem;
+    padding:7.1rem 5rem 4.1rem;
+    max-width:62.6rem ;
+    width: 100%;
+    background:var(--bg-secondary_color);
+    border-radius: 2rem;
+    box-shadow: linear-gradient(5px 15px 40px rgba(11, 24, 97, 0.32));
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 3rem;
+    ul{
+      position: absolute;
+      top: -3rem;
+      left: 5rem;;
+      li{
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        background: var(--bg_color);
+        border: 2px solid #363A4D;
+        font-weight: 700;
+        font-size: 1.40em;
+        line-height: 2;
+        text-align: center;
+        text-transform: uppercase;
+        color: #BFBFBF;
+        margin-right: 4.1rem;
+        &:last-child{
+          margin-right: 0;
+        }
+      }
+      li.active{
+        background: var(--accent_color);
+        color: var(--light_color);
+      }
+    }
+    input,textarea{
+      width: 100%;
+      background: var(--light_color);
+      border-radius: 10px;
+      padding: 1.9rem 2rem 1.8rem;
+      border: none;
+      &::placeholder{
+        font-weight: 400;
+        font-size: 1em;
+        line-height: 1.26;
+        color: #CBCBCB;
+      }
+    }
+    label p{
+      font-weight: 600;
+      font-size: 1em;
+      line-height: 1.26;
+      display: inline;
+      vertical-align: super;
+    }
+    fieldset{
+      margin: 3.9rem 0 0 0;
+    }
+    fieldset input{
+      padding: 0;
+      width: 2.4rem;
+      height: 2.4rem;
+      background:var(--light_color);
+      border: 1px solid var(--bg_color);
+      border-radius: 0.4rem;
+      margin: 0 0.9rem 1.4rem 0;
+    }
+    textarea{
+      margin-bottom: 2.4rem;
+      height: 14.7rem;
+      resize: none;
+
+    }
+  }
+  &__link svg{
+    margin-left: 3rem;
+  }
+  &__card-link{
+    line-height: 2.46;
+  }
+}
+.big__input{
+  grid-column:1/-1;
+  input{
+    border: 1px dashed rgba(255, 255, 255, 0.26);
+    border-radius: 1rem;
+    background: transparent;
+    padding: 1.2rem 1.2rem 1.7rem;
+    font-weight: 400;
+    font-size: 0.9em;
+    text-align: center;
+  }
+  .small__text{
+    font-weight: 400;
+  }
+}
+.big__item{
+  grid-column:1/-1;
+}
+.calculator{
+  margin-top: 9.7rem;
+}
+.calculator__img{
+  object-fit: cover;
+  margin-left: -4rem;
+  width: 62.6rem;
+  height: auto;
+}

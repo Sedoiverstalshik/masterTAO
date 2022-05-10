@@ -1,0 +1,39 @@
+.footer{
+  padding: 7rem 0 5rem;
+  &__row{
+    border-top: 1px solid var(--accent_color);
+    padding-top:3.4rem;
+  }
+  &__logo{
+    display: inline-block;
+    max-width: 17.2rem;
+    margin-right: 9.7rem;
+    margin-bottom: 2.8rem;
+  }
+  &__phone,&__email,&__address,&__address-item{
+    display:block;
+    font-weight: 400;
+    font-size: 0.82em;
+    line-height: 1.62;
+  }
+  &__social-link img{
+    max-width: 3.4rem;
+    max-height: 3.3rem;
+    margin-right: 0.8rem;
+  }
+  &__list-title{
+    font-size: 1.18em;
+    line-height: 1.46;
+    margin-bottom: 1.4rem;
+  }
+  &__list li{
+    margin-bottom: 0.9rem;
+  }
+  &__list a{
+    font-weight: 400;
+    font-size: 0.95em;
+    line-height: 1.6;
+    text-decoration-line: underline;
+    color: #85899C;
+  }
+}

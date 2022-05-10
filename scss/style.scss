@@ -1,0 +1,131 @@
+@import 'fonts';
+@import 'root';
+
+
+
+*,*::before,*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Proxima Nova Bold', sans-serif;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+ul,li{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color:inherit
+}
+a{
+  text-decoration: none;
+  color:inherit;
+}
+html{
+  font-size: 10px;
+}
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #282B38;
+  color:var(--light_color);
+  font-weight: 300;
+  font-size: 17px;
+}
+.title{
+  position: relative;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 124.5%;
+  text-transform: uppercase;
+  color: var(--light_color);
+  &::before{
+    content:'';
+    position: absolute;
+    width: 8.5rem;
+    height: 0.2rem;
+    background-color:var(--accent_color);
+    bottom: -2rem;
+    
+  }
+}
+.card__title{
+  font-weight: 700;
+  font-size: 1.3em;
+  line-height: 1.25;
+  text-align: center;
+  color: var(--light_color);
+}
+.btn__accent{
+  font-weight: 600;
+  font-size: 0.9em;
+  line-height: 1.46;
+  text-align: center;
+  color: var(--light_color);
+  background-color: var(--accent_color);
+  border-radius: 9rem;
+  padding: 1.4rem 2.7rem;
+  border: none;
+}
+.btn__arrow{
+  display: inline-block;
+  font-weight: 600;
+  font-size: 1em;
+  line-height: 146%;
+  background: var(--accent_color);
+  border-radius: 90px;
+  border: none;
+  padding: 2.3rem 2.1rem 2.3rem 3.3rem;
+  color: var(--light_color);
+  cursor: pointer;
+  &-svg{
+    margin-left: 5rem;
+    fill: #b26519;
+  }
+}
+.btn__border{
+  display: inline-block;
+  font-weight: 600;
+  font-size: 0.9em;
+  line-height: 1.46;
+  text-align: center;
+  color: var(--light_color);
+  border: 1px solid var(--accent_color);
+  border-radius: 9rem;
+  padding: 1.4rem 2.4rem;
+  width: 15.3rem;
+}
+img{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.container{
+  max-width: 117rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+
+// mixin
+@mixin flex-column-aic{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+@import 'header';
+@import 'hero';
+@import 'form';
+@import 'advantages';
+@import 'delivery';
+@import 'services';
+@import 'company';
+@import 'questions';
+@import 'cooperation';
+@import 'footer';

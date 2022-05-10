@@ -1,0 +1,16 @@
+.company{
+  padding-top: 6.1rem;
+  &__title{
+    margin-top: 8.4rem;
+    margin-bottom: 6.4rem;
+  }
+  &__desc{
+    font-weight: 300;
+    font-size: 1.05em;
+    line-height: 1.7;
+  }
+  img{
+    max-width: 64.7rem;
+    height: auto;
+  }
+}

@@ -1,0 +1,74 @@
+.hero{
+  position: relative;
+
+  &__swiper{
+    max-width: 182rem;
+  }
+  &__slide{
+    min-height: 70rem;
+    background-repeat: no-repeat;
+  }
+  &__img{
+    object-fit: cover;
+  }
+  &__wrap{
+    position: absolute;
+    top: 12.1rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 117rem;
+    padding: 0 1.5rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+  &__title{
+    font-size: 3.30em;
+    line-height: 1.26;
+    text-transform: uppercase;
+    max-width: 46.3rem;
+    margin-bottom: 0.8rem;
+  }&__desc{
+    font-weight: 300;
+    font-size: 1.17em;
+    line-height: 1.36;
+    max-width: 32.5rem;
+    margin-bottom: 3.7rem;
+  }
+  &__link{
+    margin-bottom: 26.7rem;
+  }
+  &__pagination {
+    margin-bottom: 4.3rem;
+  }
+  &__pagination .swiper-pagination-bullet{
+    opacity: 0.9;
+    border: 2px solid var(--light_color);
+    border-radius: 50%;
+    background: transparent;
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+  .hero__pagination .swiper-pagination-bullet {
+    margin-right: 2.6rem;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+  &__pagination .swiper-pagination-bullet-active{
+    background: var(--light_color);
+    border-radius: 50%;
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+  &__button-prev::after,
+  &__button-next::after{
+    color: var(--light_color);
+  }
+  &__button-prev::after{
+    margin-left: 15rem;
+  }
+  &__button-next::after{
+    margin-right: 15rem;
+  }
+}
