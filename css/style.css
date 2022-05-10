@@ -321,6 +321,7 @@ img {
   border-radius: 10px;
   padding: 1.9rem 2rem 1.8rem;
   border: none;
+  margin-top: 1rem;
 }
 
 .form__calculator input::-webkit-input-placeholder, .form__calculator textarea::-webkit-input-placeholder {
@@ -351,12 +352,10 @@ img {
   color: #CBCBCB;
 }
 
-.form__calculator label p {
+.form__calculator label {
   font-weight: 600;
   font-size: 1em;
   line-height: 1.26;
-  display: inline;
-  vertical-align: super;
 }
 
 .form__calculator fieldset {
@@ -370,13 +369,23 @@ img {
   background: var(--light_color);
   border: 1px solid var(--bg_color);
   border-radius: 0.4rem;
-  margin: 0 0.9rem 1.4rem 0;
+  margin: 0 0.9rem 0 0;
+  vertical-align: middle;
 }
 
 .form__calculator textarea {
   margin-bottom: 2.4rem;
   height: 14.7rem;
   resize: none;
+}
+
+.form__calculator label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.form__calculator label:last-child {
+  margin-bottom: 0;
 }
 
 .form__link svg {
