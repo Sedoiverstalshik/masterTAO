@@ -9,20 +9,31 @@
     max-width: 17.2rem;
     margin-right: 9.7rem;
     margin-bottom: 2.8rem;
+    transition: transform .5s linear;
+    &:hover{
+      transform: rotateY(-360deg);
+    }
   }
   &__phone,&__email,&__address,&__address-item{
     display:block;
     font-weight: 400;
-    font-size: 0.82em;
+    font-size: 1.4rem;
     line-height: 1.62;
+  }
+  &__phone:hover,&__email:hover{
+    color: var(--accent_color);
   }
   &__social-link img{
     max-width: 3.4rem;
     max-height: 3.3rem;
     margin-right: 0.8rem;
+    transition: transform .2s linear;
+    &:hover{
+      transform: scale(1.2);
+    }
   }
   &__list-title{
-    font-size: 1.18em;
+    font-size: 2rem;
     line-height: 1.46;
     margin-bottom: 1.4rem;
   }
@@ -31,9 +42,13 @@
   }
   &__list a{
     font-weight: 400;
-    font-size: 0.95em;
+    font-size: 1.6rem;
     line-height: 1.6;
     text-decoration-line: underline;
     color: #85899C;
+    transition: color .2s linear;
+    &:hover{
+      color: var(--light_color);
+    }
   }
 }

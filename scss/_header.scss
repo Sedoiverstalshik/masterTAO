@@ -2,7 +2,10 @@
   padding: 2.5rem 0;
   &__logo{
     max-width: 17.2rem;
-    margin-right: 9.7rem;
+    transition: transform .5s linear;
+    &:hover{
+      transform: rotateY(-360deg);
+    }
   }
   &__menu-list li{
     margin-right: 2rem;
@@ -12,7 +15,12 @@
   }
   &__menu-list a{
     font-weight: 400;
-    font-size: 1em;
+    font-size: 1.6rem;
     line-height: 1.5;
+    &:hover{
+      border-bottom: 1px solid var(--light_color);
+      padding-bottom: 1rem;
+      color: var(--light_color);
+    }
   }
 }
