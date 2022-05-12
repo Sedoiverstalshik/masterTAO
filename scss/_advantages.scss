@@ -34,3 +34,14 @@
     }
   }
 }
+
+@media(max-width:768px) {
+  .advantages__list{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media(max-width:450px) {
+  .advantages__list{
+    grid-template-columns:1fr;
+  }
+}
