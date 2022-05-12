@@ -14,11 +14,13 @@
   }
   &__swiper {
     max-width: 114rem;
+    padding-bottom: 4rem;
   }
   &__slide {
     position: relative;
-    max-width: 36rem;
-    max-height: 48.2rem;
+    width: 36rem;
+    height: 100%;
+    flex-grow: 1;
     border-radius: 2rem;
     overflow: hidden;
     &::before{
@@ -45,5 +47,16 @@
     font-size: 1.5rem;
     line-height: 1.25;
     margin-bottom: 1.4rem;
+  }
+}
+
+@media(max-width:600px){
+  .services{
+    &__swiper-pagination{
+      display: block;
+    }
+    &__button-prev,&__button-next{
+      display: none;
+    }
   }
 }

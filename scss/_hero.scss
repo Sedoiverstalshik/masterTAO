@@ -1,8 +1,11 @@
 .hero{
   position: relative;
-
+  
   &__swiper{
-    max-width: 182rem;
+    width: 182rem;
+    width: 100%;
+    filter: drop-shadow(5px 15px 40px rgba(11, 24, 97, 0.32));
+    border-radius: 2rem;
   }
   &__slide{
     min-height: 70rem;
@@ -70,5 +73,35 @@
   }
   &__button-next::after{
     margin-right: 15rem;
+  }
+}
+
+@media(max-width:1200px) {
+  .hero{
+    &__wrap{
+      margin-left: 5%;
+    }
+    &__button-prev::after{
+      margin-left: 2rem;
+    }
+    &__button-next::after{
+      margin-right: 2rem;
+    }
+  }
+}
+@media(max-width:768px) {
+  .hero{
+    &__wrap{
+      text-align: center;
+    }
+    &__title{
+      margin: 0 auto 0.8rem;
+    }
+    &__desc{
+      margin: 0 auto 3.7rem;
+    }
+    &__button-prev,&__button-next{
+      display: none;
+    }
   }
 }

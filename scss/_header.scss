@@ -1,4 +1,5 @@
 .header{
+  position: relative;
   padding: 2.5rem 0;
   &__logo{
     max-width: 17.2rem;
@@ -6,6 +7,9 @@
     &:hover{
       transform: rotateY(-360deg);
     }
+  }
+  &__menu{
+    flex-grow: 1;
   }
   &__menu-list li{
     margin-right: 2rem;
@@ -21,6 +25,31 @@
       border-bottom: 1px solid var(--light_color);
       padding-bottom: 1rem;
       color: var(--light_color);
+    }
+  }
+  &__burger{
+    fill: var(--light_color);
+    position: absolute;
+    right: 0;
+    text-align: right;
+    display: none;
+  }
+}
+@media(max-width:992px){
+  .header{
+    &__logo{
+      width: 13rem;
+    }
+  }
+}
+@media(max-width:768px){
+  .header{
+    padding-right: 1.4rem;
+    &__menu,&__btn{
+      display: none;
+    }
+    &__burger{
+      display: block;
     }
   }
 }

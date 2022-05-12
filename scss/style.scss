@@ -88,6 +88,9 @@ body{
   padding: 2.3rem 2.1rem 2.3rem 3.3rem;
   color: var(--light_color);
   cursor: pointer;
+  grid-column: 1/-1;
+  max-width: 25.3rem;
+  max-width: 100%;
   transition: background .2s linear, color .2s linear;
   &-svg{
     margin-left: 5rem;
@@ -135,7 +138,9 @@ img{
   align-items: center;
 }
 
-
+.open{
+  display: grid;
+}
 
 @import 'header';
 @import 'hero';
@@ -147,12 +152,26 @@ img{
 @import 'questions';
 @import 'cooperation';
 @import 'footer';
+@import 'modal';
 
-// @media(max-width:1000px) {
-//   html{
-//     font-size: 59px;
-//   }
-//   body{
-//     font-size: 16px;
-//   }
-// }
+@media(max-width:1200px) {
+  html,body{
+    font-size: 9px;
+  }
+}
+@media(max-width:992px) {
+  .btn__accent{
+    padding: 1rem 2rem;
+  }
+  .btn__arrow{
+    padding: 1.8rem 1.8rem 1.8rem 2.5rem;
+  }
+}
+@media(max-width:768px) {
+  .title{
+    text-align: center;
+    &::before{
+      left: 44%;
+    }
+  }
+}
