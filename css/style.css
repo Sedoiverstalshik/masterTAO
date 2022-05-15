@@ -1327,7 +1327,7 @@ img {
   background-color: var(--bg_color);
 }
 
-.modal__form form-title {
+.modal__form-title {
   font-size: 2.4rem;
   line-height: 1.26;
   text-transform: uppercase;
@@ -1335,7 +1335,7 @@ img {
   margin-bottom: 1.2rem;
 }
 
-.modal__form form-desc {
+.modal__form-desc {
   font-weight: 300;
   font-size: 1.7rem;
   line-height: 1.26;
@@ -1343,7 +1343,7 @@ img {
   margin-bottom: 2.7rem;
 }
 
-.modal__form form .h100 textarea {
+.modal__form .h100 textarea {
   height: 10rem;
   margin-bottom: 0;
 }
