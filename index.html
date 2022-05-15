@@ -15,29 +15,40 @@
 <body>
   <header class="header">
     <div class="container">
-      <div class="row d-flex align-items-center justify-content-between">
-        <a class="col-2 header__logo logo" href="#">
-          <img src="image/logo.svg" alt="logo">
-        </a>
-        <div class="col-md-7 col-lg-8 col-xl-6">
-          <nav class="header__menu menu">
-            <ul class="header__menu-list d-flex justify-content-between align-items-center">
-              <li><a href="#">Цены и сроки</a></li>
-              <li><a href="#services">Услуги</a></li>
-              <li><a href="#company">О компании</a></li>
-              <li><a href="#footer">Контакты</a></li>
-              <li><a href="#">Оформить груз</a></li>
-            </ul>
-          </nav>
-        </div>
-        <div class="col-2 flex-grow-1 text-end">
-          <button class="header__btn btn__accent">Оставить заявку</button>
-        </div>
-        <div class="header__burger burger">
-          <svg width="28" height="26" viewBox="0 0 28 26" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0.25 0.5H27.75V3H0.25V0.5ZM0.25 11.75H27.75V14.25H0.25V11.75ZM0.25 23H27.75V25.5H0.25V23Z" />
-          </svg>
-        </div>
+      <div class="row">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="navbar-brand header__logo logo" href="#">
+              <img src="image/logo.svg" alt="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+              aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+              <svg width="28" height="26" viewBox="0 0 28 26" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.25 0.5H27.75V3H0.25V0.5ZM0.25 11.75H27.75V14.25H0.25V11.75ZM0.25 23H27.75V25.5H0.25V23Z" />
+              </svg>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Цены и сроки</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#services">Услуги</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#company">О компании</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#footer" tabindex="-1" aria-disabled="true">Контакты</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Оформить груз</a>
+                </li>
+              </ul>
+              <button class="header__btn btn__accent" data-modal-button="modal_1">Оставить заявку</button>
+            </div>
+          </div>
+        </nav>
       </div>
     </div>
     <!-- /.container -->
@@ -56,7 +67,7 @@
               <div class="hero__wrap">
                 <h1 class="hero__title">Прямое КАРГО из Китая</h1>
                 <p class="hero__desc">Доставляем любые грузы из Китая по честной цене</p>
-                <a href="#" class="hero__link btn__arrow">Рассчитать стоимость
+                <a href="#form1" class="hero__link btn__arrow">Рассчитать стоимость
                   <svg class="btn__arrow-svg" width="27" height="27" viewBox="0 0 27 27"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -73,7 +84,7 @@
                 <h2 class="hero__title">Гарантируем сроки!</h2>
                 <p class="hero__desc">Если мы не уложимся в обозначенные сроки,
                   доставка груза со скидкой до 90%</p>
-                <a href="#" class="hero__link btn__arrow">Рассчитать стоимость
+                <a href="#form1" class="hero__link btn__arrow">Рассчитать стоимость
                   <svg class="btn__arrow-svg" width="27" height="27" viewBox="0 0 27 27"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -90,7 +101,7 @@
                 <h2 class="hero__title">Выкуп товара с ТаоБао, 1688</h2>
                 <p class="hero__desc">Выкуп и доставка товаров
                   с китайских торговых площадок. </p>
-                <a href="#" class="hero__link btn__arrow">Рассчитать стоимость
+                <a href="#form" class="hero__link btn__arrow">Рассчитать стоимость
                   <svg class="btn__arrow-svg" width="27" height="27" viewBox="0 0 27 27"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -106,7 +117,7 @@
               <div class="hero__wrap">
                 <h2 class="hero__title">Экспресс авто доставка</h2>
                 <p class="hero__desc">Доставка автотранспортом из Китая в Россию от 15 дней, от $0,5/кг</p>
-                <a href="#" class="hero__link btn__arrow">Рассчитать стоимость
+                <a href="#form" class="hero__link btn__arrow">Рассчитать стоимость
                   <svg class="btn__arrow-svg" width="27" height="27" viewBox="0 0 27 27"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -116,18 +127,14 @@
               </div>
               <!-- /.hero__wrap -->
             </div>
-
           </div>
-          <!-- If we need pagination -->
           <div class=" hero__pagination swiper-pagination"></div>
-
-          <!-- If we need navigation buttons -->
           <div class="hero__button-prev swiper-button-prev"></div>
           <div class="hero__button-next swiper-button-next"></div>
         </div>
       </div>
     </section>
-    <section class="calculator">
+    <section id="form1" class="calculator">
       <div class="container">
         <div class="row">
           <div class="col-sm-12 col-md-7 col-lg-7 col-xl-7">
@@ -152,7 +159,7 @@
               </label>
               <label>
                 Объем груза (м3):
-                <span class="btn__calculate">Рассчитать</span>
+                <span class="btn__calculate" data-modal-button="modal_2">Рассчитать</span>
                 <input type="text" placeholder="Введите объем">
               </label>
               <fieldset>
@@ -173,7 +180,7 @@
                 фотография.jpeg
                 <input type="text" placeholder="Загрузить фото товара">
               </label>
-              <button type="submit" class="form__link btn__arrow">Следующий шаг
+              <button type="button" id="button__form-next1" class="form__link btn__arrow">Следующий шаг
                 <svg class="btn__arrow-svg" width="27" height="27" viewBox="0 0 27 27"
                   xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -189,7 +196,7 @@
       </div>
       <!-- /.container -->
     </section>
-    <section class="calculator">
+    <section id="form2" class="calculator none">
       <div class="container">
         <div class="row">
           <div class="col-sm-12 col-md-7 col-lg-7 col-xl-7">
@@ -217,8 +224,8 @@
                 <textarea placeholder="Подробности о товаре, описание, количество"></textarea>
               </label>
               <div class="button__wrap d-flex justify-content-between">
-                <a href="#" class="form__card-link btn__border">Назад</a>
-                <button type="submit" class="form__link btn__arrow">Следующий шаг
+                <button type="button" id="button__form-prev" class="form__card-link btn__border">Назад</button>
+                <button type="submit" id="button__form-next2" class="form__link btn__arrow">Следующий шаг
                   <svg class="btn__arrow-svg" width="27" height="27" viewBox="0 0 27 27"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -235,7 +242,7 @@
       </div>
       <!-- /.container -->
     </section>
-    <section class="calculator">
+    <section id="form3" class="calculator none">
       <div class="container">
         <div class="row">
           <div class="col-sm-12 col-md-7 col-lg-7 col-xl-7 d- flex align-self-center">
@@ -586,11 +593,8 @@
           <h3 class="delivery__title title">Варианты доставки грузов из Китая</h3>
         </div>
         <div class="row">
-          <!-- Slider main container -->
           <div class="delivery__swiper swiper">
-            <!-- Additional required wrapper -->
             <div class="delivery__swiper-wrapper swiper-wrapper">
-              <!-- Slides -->
               <div class="delivery__swiper-slide swiper-slide">
                 <img src="image/delivery/delivery1.webp" alt="Фото большого грузовика" class="delivery__card-img">
                 <h5 class="delivery__card-title card__title">Авто - обычная</h5>
@@ -632,7 +636,7 @@
                 </div>
                 <p class="delivery__card-price">от <span class="span1">2,5</span><span class="span2"> $/кг</span></p>
                 <div class="delivery__card-buttons d-flex justify-content-center">
-                  <button class="delivery__card-btn btn__accent">Оставить заявку</button>
+                  <button class="delivery__card-btn btn__accent" data-modal-button="modal_1">Оставить заявку</button>
                   <a href="#" class="delivery__card-link btn__border">Подробнее</a>
                 </div>
                 <!-- /.delivery__card-buttons -->
@@ -678,7 +682,7 @@
                 </div>
                 <p class="delivery__card-price">от <span class="span1">2,5</span><span class="span2"> $/кг</span></p>
                 <div class="delivery__card-buttons d-flex justify-content-center">
-                  <button class="delivery__card-btn btn__accent">Оставить заявку</button>
+                  <button class="delivery__card-btn btn__accent" data-modal-button="modal_1">Оставить заявку</button>
                   <a href="#" class="delivery__card-link btn__border">Подробнее</a>
                 </div>
                 <!-- /.delivery__card-buttons -->
@@ -724,7 +728,7 @@
                 </div>
                 <p class="delivery__card-price">от <span class="span1">2,5</span><span class="span2"> $/кг</span></p>
                 <div class="delivery__card-buttons d-flex justify-content-center">
-                  <button class="delivery__card-btn btn__accent">Оставить заявку</button>
+                  <button class="delivery__card-btn btn__accent" data-modal-button="modal_1">Оставить заявку</button>
                   <a href="#" class="delivery__card-link btn__border">Подробнее</a>
                 </div>
                 <!-- /.delivery__card-buttons -->
@@ -770,7 +774,7 @@
                 </div>
                 <p class="delivery__card-price">от <span class="span1">2,5</span><span class="span2"> $/кг</span></p>
                 <div class="delivery__card-buttons d-flex justify-content-center">
-                  <button class="delivery__card-btn btn__accent">Оставить заявку</button>
+                  <button class="delivery__card-btn btn__accent" data-modal-button="modal_1">Оставить заявку</button>
                   <a href="#" class="delivery__card-link btn__border">Подробнее</a>
                 </div>
                 <!-- /.delivery__card-buttons -->
@@ -816,17 +820,14 @@
                 </div>
                 <p class="delivery__card-price">от <span class="span1">2,5</span><span class="span2"> $/кг</span></p>
                 <div class="delivery__card-buttons d-flex justify-content-center">
-                  <button class="delivery__card-btn btn__accent">Оставить заявку</button>
+                  <button class="delivery__card-btn btn__accent" data-modal-button="modal_1">Оставить заявку</button>
                   <a href="#" class="delivery__card-link btn__border">Подробнее</a>
                 </div>
                 <!-- /.delivery__card-buttons -->
               </div>
             </div>
-
-            <!-- If we need navigation buttons -->
             <div class="delivery__swiper-prev swiper-button-prev"></div>
             <div class="delivery__swiper-next swiper-button-next"></div>
-
             <div class="delivery__swiper-pagination swiper-pagination"></div>
           </div>
         </div>
@@ -841,7 +842,6 @@
         <div class="row">
           <div class="services__swiper swiper">
             <div class="services__swiper-wrapper swiper-wrapper">
-              <!-- Slides -->
               <div class="services__slide swiper-slide">
                 <img src="image/services/services1.webp" alt="alt" class="services__slide-img">
                 <div class="services__slide-box">
@@ -887,8 +887,6 @@
                 </div>
               </div>
             </div>
-
-            <!-- If we need navigation buttons -->
             <div class="services__button-prev swiper-button-prev"></div>
             <div class="services__button-next swiper-button-next"></div>
             <div class="delivery__swiper-pagination swiper-pagination"></div>
@@ -1173,35 +1171,35 @@
     <!-- /.container -->
   </footer>
 
-
-
-
-  <div class="modal__form modal__application-form none">
-    <form action="#" class="form__calculator">
-      <img src="image/close.svg" alt="alt" class="form__close">
+  <div id="modal_1" class="modal1 none" data-modal>
+    <form class="form__calculator modal__form modal__windows">
+      <img src="image/close.svg" alt="alt" data-modal-close class="form__close">
       <h3 class="modal__form-title">Оставьте заявку</h3>
-      <p class="modal__form-desc">Заполните заявку, сообщите наименование товара/груза и наш специалист свяжется с Вами
+      <p class="modal__form-desc">Заполните заявку, сообщите наименование товара/груза и наш специалист свяжется с
+        Вами
         в
-        рабочее время.</p>
-      <label class="big__item">
-        Имя:
-        <input type="text" placeholder="Ваше имя">
-      </label>
-      <label>
-        Номер телефона:
-        <input type="tel" placeholder="+7 (___) ___ - __ - __">
-      </label>
-      <label>
-        Email:
-        <input type="email" placeholder="Введите e-mail">
-      </label>
-      <label class="big__item h100">
-        Примечание:
-        <textarea
+        рабочее время.
+      </p>
+      <div class="mb-3  big__item">
+        <label for="exampleInputEmail1" class="form-label">Имя:</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Ваше имя *"
+          aria-describedby="emailHelp">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Номер телефона:</label>
+        <input type="tel" class="form-control" id="exampleInputPassword1" placeholder="+7 (___) ___ - __ - __ *">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Email:</label>
+        <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Введите e-mail *">
+      </div>
+      <div class="mb-3 big__item">
+        <label for="exampleInputPassword1" class="form-label  h100">Примечание:</label>
+        <textarea type="text" class="form-control" id="exampleInputPassword1"
           placeholder="Сообщите здесь наименование товара/груза, количество или примерный вес, а так же укажите вопросы которые вас интересуют *"></textarea>
-      </label>
+      </div>
       <p class="form__small-text">* - обязательные поля</p>
-      <button type="submit" class="form__link btn__arrow">Рассчитать
+      <button type="submit" class="btn btn-primary btn__arrow form__link">Рассчитать
         <svg class="btn__arrow-svg" width="27" height="27" viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M0.421875 13.5C0.421875 6.27539 6.27539 0.421875 13.5 0.421875C20.7246 0.421875 26.5781 6.27539 26.5781 13.5C26.5781 20.7246 20.7246 26.5781 13.5 26.5781C6.27539 26.5781 0.421875 20.7246 0.421875 13.5ZM13.5 24.8906C19.7596 24.8906 24.8906 19.8229 24.8906 13.5C24.8906 7.24043 19.8229 2.10938 13.5 2.10938C7.24043 2.10938 2.10938 7.17715 2.10938 13.5C2.10938 19.7596 7.17715 24.8906 13.5 24.8906ZM14.1592 20.0127L20.2289 13.9482C20.4768 13.7004 20.4768 13.2996 20.2289 13.0518L14.1592 6.9873C13.9113 6.73945 13.5105 6.73945 13.2627 6.9873L12.8988 7.35117C12.651 7.59902 12.651 8.01035 12.9094 8.25293L17.4182 12.6035H7.38281C7.03477 12.6035 6.75 12.8883 6.75 13.2363V13.7637C6.75 14.1117 7.03477 14.3965 7.38281 14.3965H17.4182L12.9041 18.7471C12.651 18.9949 12.6457 19.401 12.8936 19.6488L13.2574 20.0127C13.5105 20.2605 13.9113 20.2605 14.1592 20.0127Z" />
@@ -1209,10 +1207,10 @@
       </button>
     </form>
   </div>
-  <!-- /.modal__application-form -->
-  <div class="modal__form none">
-    <form action="#" class="form__volume form__calculator">
-      <img src="image/close.svg" alt="alt" class="form__close">
+
+  <div id="modal_2" class="modal1 none" data-modal>
+    <form action="#" class="form__volume form__calculator modal__windows">
+      <img src="image/close.svg" alt="alt" data-modal-close class="form__close">
       <h3 class="modal__form-title">Рассчитать объем</h3>
       <label>
         Единица измерения:

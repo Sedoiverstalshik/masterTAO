@@ -1,7 +1,3 @@
-.none {
-  display: none;
-}
-
 @font-face {
   font-family: 'Proxima Nova Light';
   src: url("../fonts/proxima_nova_light.woff2") format("woff2"), url("../fonts/proxima_nova_light.woff") format("woff");
@@ -64,7 +60,7 @@ a {
 body {
   margin: 0;
   padding: 0;
-  background-color: #282B38;
+  background-color: var(--bg_color);
   color: var(--light_color);
   font-weight: 300;
   font-size: 1.7rem;
@@ -151,6 +147,7 @@ body {
   font-size: 1.5rem;
   line-height: 1.46;
   text-align: center;
+  background-color: transparent;
   color: var(--light_color);
   border: 1px solid var(--accent_color);
   border-radius: 9rem;
@@ -177,9 +174,8 @@ img {
   padding: 0 1.5rem;
 }
 
-.open {
-  display: -ms-grid;
-  display: grid;
+.none {
+  display: none;
 }
 
 .header {
@@ -189,6 +185,7 @@ img {
 
 .header__logo {
   max-width: 17.2rem;
+  margin-right: 9.7rem;
   -webkit-transition: -webkit-transform .5s linear;
   transition: -webkit-transform .5s linear;
   transition: transform .5s linear;
@@ -206,32 +203,36 @@ img {
           flex-grow: 1;
 }
 
-.header__menu-list li {
+.header .nav-item {
   margin-right: 2rem;
 }
 
-.header__menu-list li:last-child {
+.header .nav-item:last-child {
   margin-right: 0;
 }
 
-.header__menu-list a {
+.header .nav-link {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.5;
-}
-
-.header__menu-list a:hover {
-  border-bottom: 1px solid var(--light_color);
-  padding-bottom: 1rem;
   color: var(--light_color);
 }
 
-.header__burger {
+.header .nav-link:hover {
+  color: var(--accent_color);
+}
+
+.header .navbar-toggler {
+  padding: 0;
+  width: 4rem;
+  height: 4rem;
+  border: none;
+}
+
+.header .navbar-toggler svg {
   fill: var(--light_color);
-  position: absolute;
-  right: 0;
-  text-align: right;
-  display: none;
+  width: 2.7rem;
+  height: 2.5rem;
 }
 
 @media (max-width: 992px) {
@@ -396,7 +397,8 @@ img {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  gap: 2rem 3rem;
+  -webkit-column-gap: 3rem;
+          column-gap: 3rem;
 }
 
 .form__calculator ul {
@@ -500,6 +502,10 @@ img {
 
 .form__calculator label:last-child {
   margin-bottom: 0;
+}
+
+.form__link {
+  max-width: 25.3rem;
 }
 
 .form__link svg {
@@ -607,9 +613,12 @@ img {
   border-bottom: 1px solid var(--light_color);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 992px) {
   .form__calculator {
     padding: 5rem 1rem 3rem;
+  }
+  .btn__calculate {
+    right: 2rem;
   }
 }
 
@@ -818,6 +827,7 @@ img {
 
 .delivery__card-buttons {
   margin-bottom: 2.7rem;
+  padding: 0 1rem;
 }
 
 .delivery__card-btn {
@@ -1301,19 +1311,23 @@ img {
   }
 }
 
-.modal__form {
-  position: absolute;
-  -webkit-transform: translate(50%);
-          transform: translate(50%);
+.modal1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   z-index: 55;
-  display: none;
+  background-color: var(--bg_color);
 }
 
-.modal__form form {
+.modal__form {
   padding: 4.8rem 5rem 4rem;
+  margin: 0 auto;
+  background-color: var(--bg_color);
 }
 
-.modal__form-title {
+.modal__form form-title {
   font-size: 2.4rem;
   line-height: 1.26;
   text-transform: uppercase;
@@ -1321,7 +1335,7 @@ img {
   margin-bottom: 1.2rem;
 }
 
-.modal__form-desc {
+.modal__form form-desc {
   font-weight: 300;
   font-size: 1.7rem;
   line-height: 1.26;
@@ -1329,7 +1343,7 @@ img {
   margin-bottom: 2.7rem;
 }
 
-.modal__form .h100 textarea {
+.modal__form form .h100 textarea {
   height: 10rem;
   margin-bottom: 0;
 }
@@ -1351,10 +1365,13 @@ img {
 }
 
 .form__volume {
-  display: none;
+  display: -ms-grid;
+  display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   max-width: 35.4rem;
+  height: 62.7rem;
+  margin: 0 auto;
 }
 
 @media (max-width: 1200px) {
@@ -1378,5 +1395,6 @@ img {
   }
   .title::before {
     left: 44%;
+    bottom: -1rem !important;
   }
 }

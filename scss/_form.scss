@@ -17,7 +17,7 @@
     box-shadow: linear-gradient(5px 15px 40px rgba(11, 24, 97, 0.32));
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem 3rem;
+    column-gap: 3rem;
     ul{
       position: absolute;
       top: -3rem;
@@ -89,6 +89,9 @@
       }
     }
   }
+  &__link{
+    max-width: 25.3rem;
+  }
   &__link svg{
     margin-left: 3rem;
   }
@@ -121,7 +124,6 @@
   object-fit: cover;
   margin-left: -4rem;
   max-width: 62.6rem;
-  // height: auto;
 }
 .btn__calculate{
   position: absolute;
@@ -180,9 +182,12 @@
   }
 }
 
-@media(max-width:800px){
+@media(max-width:992px){
   .form__calculator{
     padding: 5rem 1rem 3rem;
+  }
+  .btn__calculate{
+    right: 2rem;
   }
 }
 @media(max-width:768px) {

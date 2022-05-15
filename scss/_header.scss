@@ -3,6 +3,7 @@
   padding: 2.5rem 0;
   &__logo{
     max-width: 17.2rem;
+    margin-right: 9.7rem;
     transition: transform .5s linear;
     &:hover{
       transform: rotateY(-360deg);
@@ -11,28 +12,31 @@
   &__menu{
     flex-grow: 1;
   }
-  &__menu-list li{
+  .nav-item{
     margin-right: 2rem;
     &:last-child{
       margin-right: 0;
     }
   }
-  &__menu-list a{
+  .nav-link{
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 1.5;
+    color: var(--light_color);
     &:hover{
-      border-bottom: 1px solid var(--light_color);
-      padding-bottom: 1rem;
-      color: var(--light_color);
+      color: var(--accent_color);
     }
   }
-  &__burger{
-    fill: var(--light_color);
-    position: absolute;
-    right: 0;
-    text-align: right;
-    display: none;
+  .navbar-toggler{
+    padding: 0;
+    width: 4rem;
+    height: 4rem;
+    border: none;
+    svg{
+      fill: var(--light_color);
+      width: 2.7rem;
+      height: 2.5rem;
+    }
   }
 }
 @media(max-width:992px){
