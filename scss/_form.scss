@@ -1,117 +1,229 @@
+.title__calculator{
+  margin-bottom: 6.2rem;
+  &::before{
+    bottom: 2rem!important;
+    right: 6rem;
+  }
+}
 .form{
-  padding-top: 10rem;
-  margin-bottom: 10rem;
-  &__container{
-    background-image: url(../image/7/form_bg.jpg);
-    border-radius: 50px 0px;
+  &__calculator{
     position: relative;
-    padding: 5.1rem 6.7rem;
-    @extend .flex-aic-jcsb;
-  }
-  &__img{
-    max-width: 46rem;
-    max-height: 46rem;
-    position: absolute;
-    top: -10rem;
-    left: 3.3rem;
-  }
-  &__wrap{
-    max-width: 50.4rem;
-    margin-left: auto;
-  }
-  &__title{
-    margin-bottom: 1.5rem;
-  }
-  &__desc{
-    margin-bottom: 3rem;
-  }
-  form{
-    background:var(--color__light);
-    border-radius: 1.3rem;
-    padding: 0.5rem 0.5rem 0.5rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    input{
-      border: none;
+    margin-bottom: 11rem;
+    padding:7.1rem 5rem 4.1rem;
+    max-width:62.6rem ;
+    width: 100%;
+    background:var(--bg-secondary_color);
+    border-radius: 2rem;
+    box-shadow: linear-gradient(5px 15px 40px rgba(11, 24, 97, 0.32));
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+    ul{
+      position: absolute;
+      top: -3rem;
+      left: 5rem;;
+      li{
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        background: var(--bg_color);
+        border: 2px solid #363A4D;
+        font-weight: 700;
+        font-size: 2.4rem;
+        line-height: 2;
+        text-align: center;
+        text-transform: uppercase;
+        color: #BFBFBF;
+        margin-right: 4.1rem;
+        &:last-child{
+          margin-right: 0;
+        }
+      }
+      li.active{
+        background: var(--accent_color);
+        color: var(--light_color);
+      }
     }
-    .form__email::placeholder{
-      font-size: 1.3rem;
-      line-height: 1.5;
-      color: #ccc;
+    input,textarea{
       width: 100%;
+      background: var(--light_color);
+      border-radius: 1rem;
+      padding: 1.9rem 2rem 1.8rem;
+      border: none;
+      margin-top: 1rem;
+      &::placeholder{
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 1.26;
+        color: #CBCBCB;
+      }
     }
-    .form__email{
-      width: 70%;
+    label {
+      font-weight: 600;
+      font-size: 1.5rem;
+      line-height: 1.26;
     }
-    .form__btn{
-      background: var(--color__accent);
-      border-radius: 1.3rem;
-      border:1.5px solid transparent;
-      font-weight: 700;
-      font-size: 1.6rem;
-      line-height: 1.5;
-      color: var(--color__light);
-      padding: 1.3rem 2.2rem;
-      transition: background-color 0.2s linear, color 0.2s linear;
-      &:hover{
-        background: var(--color__light);
-        color: var(--color__accent);
-        border:1.5px solid var(--color__accent);
+    fieldset{
+      margin: 3.9rem 0 0 0;
+    }
+    fieldset input{
+      padding: 0;
+      width: 2.4rem;
+      height: 2.4rem;
+      background:var(--light_color);
+      border: 1px solid var(--bg_color);
+      border-radius: 0.4rem;
+      margin: 0 0.9rem 0 0;
+      vertical-align: middle;
+    }
+    textarea{
+      margin-bottom: 2.4rem;
+      height: 14.7rem;
+      resize: none;
+    }
+    label{
+      display: block;
+      margin-bottom: 1rem;
+      &:last-child{
+        margin-bottom: 0;
       }
     }
   }
+  &__link{
+    max-width: 25.3rem;
+  }
+  &__link svg{
+    margin-left: 3rem;
+  }
+  &__card-link{
+    line-height: 2.46;
+  }
+}
+.big__input{
+  grid-column:1/-1;
+  input{
+    border: 1px dashed rgba(255, 255, 255, 0.26);
+    border-radius: 1rem;
+    background: transparent;
+    padding: 1.2rem 1.2rem 1.7rem;
+    font-weight: 400;
+    font-size: 0.9em;
+    text-align: center;
+  }
+}
+.big__input.small__text{
+  font-weight: 400;
+}
+.big__item{
+  grid-column:1/-1;
+}
+.calculator{
+  margin-top: 9.7rem;
+}
+.calculator__img{
+  object-fit: cover;
+  margin-left: -4rem;
+  max-width: 62.6rem;
+}
+.btn__calculate{
+  position: absolute;
+  right: 5rem;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.46;
+  text-decoration-line: underline;
+  color: var(--accent_color);
+  background-color: transparent;
+  border: none;
+}
+.button__wrap{
+  grid-column: 1/-1;
 
 }
-@media(max-width:1100px){
-  .form{
-    &__container{
-      padding: 5.1rem 3.7rem;;
+.calculator__box{
+  &-img{
+    width: 11.2rem;
+    height: 11.2rem;
+    margin-bottom: 3.4rem;
+  }
+  &-title{
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 1.26;
+    margin-bottom: 1rem;
+  }
+  &-desc{
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.26;
+    margin-bottom: 3.7rem;
+  }
+  &-list-title{
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1.44;
+    margin-bottom: 1rem;
+  }
+  &-list{
+    padding-left: 3rem;
+    margin-bottom: 10rem;
+    li{
+      list-style: disc;
     }
-    &__img{
-      max-width: 40rem;
-      max-height: 40rem;
-      top: -6rem;
-      left: 1rem;
+    a{
+      font-weight: 300;
+      font-size: 1.8rem;
+      line-height: 1.44;
+      &:hover{
+        color: var(--light_color);
+        border-bottom: 1px solid var(--light_color);
+      }
     }
   }
 }
-@media(max-width:1000px){
-  .form{
-    padding-top: 6rem;
-    margin-bottom: 5rem;
-    &__wrap{
-      width: 50%;
-    }
-    &__desc{
-      font-size: 1.2rem;
-    }
+
+@media(max-width:992px){
+  .form__calculator{
+    padding: 5rem 1rem 3rem;
+  }
+  .btn__calculate{
+    right: 2rem;
   }
 }
-@media(max-width:800px){
-  .form{
-    &__img{
-      max-width: 33rem;
-      max-height: 33rem;
-      top: 0;
-      left: 0;
-    }
+@media(max-width:768px) {
+ .form__calculator{
+   max-width: 100%;
+ }
+ .calculator__img{
+   display: none;
+ }
+ .calculator__box{
+   text-align: center;
+   &-img{
+     margin: 0 auto 3.4rem;
+   }
+   &-list li{
+     list-style: none;
+   }
+ }
+}
+@media(max-width:450px) {
+  .form__calculator{
+    grid-template-columns: 1fr;
   }
 }
-@media(max-width:700px){
-  .form{
-    &__img{
-      display: none;
-    }
-    &__container{
-      padding: 4rem 1.5rem;
-    }
-    &__wrap{
-      max-width: 100%;
-      width: 100%;
-      text-align: center;
-    }
+@media(max-width:400px) {
+  .button__wrap {
+    flex-direction: column;
   }
-  .form form .form__btn{
-    font-size: 1.2rem;
+  .form__card-link{
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .form__link{
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }

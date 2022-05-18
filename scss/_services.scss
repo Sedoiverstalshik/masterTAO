@@ -1,63 +1,72 @@
-.services{
-  padding-top: 10rem ;
-  margin-bottom: 10rem;
-  &__title{
+.services {
+  padding-top: 9.7rem;
+  padding-bottom: 10rem;
+  background: var(--bg-secondary_color);
+  max-width: 182rem;
+  max-height: 79.4rem;
+  margin: 0 auto;
+  &__title {
     text-align: center;
-    margin-bottom: 6rem;
-  }
-  &__list{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 3rem;
-  }
-  &__list li{
-    border: 2px solid #EEEEEE;
-    border-radius: 60px 0px;
-    text-align: center;
-    padding: 7rem 2rem;
-    transition: box-shadow 0.2s linear;
-    &:hover{
-      box-shadow: 5px 15px 45px rgba(0, 0, 0, 0.1);
+    margin-bottom: 7rem;
+    &::before{
+      left: 46%;
     }
   }
-  &__list svg{
-    fill: var(--color__accent);
+  &__swiper {
+    max-width: 114rem;
+    padding-bottom: 4rem;
   }
-  &__card-title{
-    font-size: 2.6rem;
-    line-height: 1.6;
-    margin-bottom: 2.2rem;
-
+  &__slide {
+    position: relative;
+    width: 36rem;
+    height: 100%;
+    flex-grow: 1;
+    border-radius: 2rem;
+    overflow: hidden;
+    &::before{
+      content:'';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(0deg, rgba(4, 5, 17, 0.91) 0%, rgba(88, 88, 88, 0) 100%);
+    }
   }
-  &__desc{
-    font-size: 1.6rem;
-    line-height: 1.6;
-    max-width: 33rem;
-    text-align: center;
+  &__slide-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 3.3rem 2.3rem 3rem;
+  }
+  &__slide-title {
+    margin-bottom: 1.3rem;
+  }
+  &__slide-desc {
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.25;
+    margin-bottom: 1.4rem;
   }
 }
 
 @media(max-width:1000px){
   .services{
-    margin-bottom: 6rem;
-    &__list{
-      gap: 1.5rem;
-    }
-    &__card-title{
-      font-size: 2rem;
-    }
-    &__desc{
-      font-size: 1.2rem;
+    &__swiper {
+      max-width: 75rem;
     }
   }
 }
 @media(max-width:700px){
   .services{
-    &__list{
-      grid-template-columns: 1fr;
+    &__swiper {
+      max-width: 38rem;
     }
-    &__desc{
-      margin: 0 auto;
+    &__swiper-pagination{
+      display: block;
+    }
+    &__button-prev,&__button-next{
+      display: none;
     }
   }
 }
