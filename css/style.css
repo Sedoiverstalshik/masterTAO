@@ -1,20 +1,24 @@
 @font-face {
   font-family: 'Proxima Nova Light';
+  font-display: swap;
   src: url("../fonts/proxima_nova_light.woff2") format("woff2"), url("../fonts/proxima_nova_light.woff") format("woff");
 }
 
 @font-face {
   font-family: 'Proxima Nova Regular';
+  font-display: swap;
   src: url("../fonts/proxima_nova_regular.woff2") format("woff2"), url("../fonts/proxima_nova_regular.woff") format("woff");
 }
 
 @font-face {
   font-family: 'Proxima Nova Semibold';
+  font-display: swap;
   src: url("../fonts/proxima_nova_semibold.woff2") format("woff2"), url("../fonts/proxima_nova_semibold.woff") format("woff");
 }
 
 @font-face {
   font-family: 'Proxima Nova Bold';
+  font-display: swap;
   src: url("../fonts/proxima_nova_bold.woff2") format("woff2"), url("../fonts/proxima_nova_bold.woff") format("woff");
 }
 
@@ -62,6 +66,7 @@ body {
   padding: 0;
   background-color: var(--bg_color);
   color: var(--light_color);
+  font-family: 'Proxima Nova Light', Arial, Helvetica, sans-serif;
   font-weight: 300;
   font-size: 1.7rem;
 }
@@ -433,6 +438,7 @@ img {
 
 .form__calculator input, .form__calculator textarea {
   width: 100%;
+  font-size: 1.7rem;
   background: var(--light_color);
   border-radius: 1rem;
   padding: 1.9rem 2rem 1.8rem;
@@ -526,7 +532,7 @@ img {
   background: transparent;
   padding: 1.2rem 1.2rem 1.7rem;
   font-weight: 400;
-  font-size: 0.9em;
+  font-size: 1.7rem;
   text-align: center;
 }
 
